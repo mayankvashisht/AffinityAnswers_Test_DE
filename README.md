@@ -18,5 +18,8 @@ b. Find all the columns that can be used to connect the tables in the given data
 c. Which type of rice has the longest DNA sequence? (hint: use the rfamseq and the taxonomy tables)
 d. We want to paginate a list of the family names and their longest DNA sequence lengths (in descending order of length) where only families that have DNA sequence lengths greater than 1,000,000 are included. Give a query that will return the 9th page when there are 15 results per page. (hint: we need the family accession ID, family name and the maximum length in the results)
 
+https://github.com/mayankvashisht/AffinityAnswers_Test_DE/tree/main/Question%202%20-%20SQL%20NCBI%20Data
 
 3. This question is to test your aptitude for writing small shell scripts on Unix. You are given this URL amfiindia.com/spages/NAVAll.txt. Write a shell script that extracts the Scheme Name and Asset Value fields only and saves them in a tsv file. And ever wondered if this data should not be stored in JSON
+
+https://github.com/mayankvashisht/AffinityAnswers_Test_DE/tree/main/Question%203%20-%20Extract%20data%20using%20shell%20script
