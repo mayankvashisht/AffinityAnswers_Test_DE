@@ -9,6 +9,8 @@ e.g. of an incorrect addresses: "2nd Phase, 374/B, 80 Feet Rd, Mysore Bank Colon
 
 Once you have written the program above, list the test cases you would use to test your program.
 
+https://github.com/mayankvashisht/AffinityAnswers_Test_DE/tree/main/Question%201%20-%20Validate%20Pincode
+
 
 2. The following questions test your aptitude for interacting with databases. The questions are based off the following public SQL DB: docs.rfam.org/en/latest/database.html
 a. How many types of tigers can be found in the taxonomy table of the dataset? What is the "ncbi_id" of the Sumatran Tiger? (hint: use the biological name of the tiger)
