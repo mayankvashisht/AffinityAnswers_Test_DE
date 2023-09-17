@@ -1,0 +1,37 @@
+-- Query for number of tiger species and ncbi id of sumatran tiger
+select count(`species`) from `taxonomy` where `species` like '%panthera tigris%';
+-- number of tigers - 8
+select ncbi_id from `taxonomy` where `species` like '%Panthera tigris sumatrae%';
+-- for sumatran tigers ncbi id is - 9695
+
+
+
+-- Query for all the columns that can be used to connect the tables in the given database
+Select TABLE_NAME, COLUMN_NAME
+from INFORMATION_SCHEMA.COLUMNS
+where TABLE_SCHEMA = 'Rfam' AND COLUMN_KEY = 'PRI' order by table_name;
+
+
+
+-- Query for type of rice has the longest DNA sequence
+select species, max(length) lenght_of_dna from rfamseq seq
+join 
+(select ncbi_id, species from taxonomy
+where species like "%oryza sativa%") tax
+on tax.ncbi_id = seq.ncbi_id
+group by species
+order by 2 desc
+limit 1;
+
+
+-- Query for list of the family names and their longest DNA sequence lengths (in descending order of length) where only families that have DNA sequence lengths greater than 1,000,000 are included
+select s.accession accession_id, f.description family_name, s.length length from family f
+join family_ncbi fn
+on fn.rfam_acc = f.rfam_acc
+join rfamseq s
+on s.ncbi_id = fn.ncbi_id
+where s.length > 1000000
+order by 2, 3 desc
+limit 15
+offset 120
+;
